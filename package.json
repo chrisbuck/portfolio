@@ -1,9 +1,9 @@
 {
-  "name": "portfolio",
-  "version": "0.2.0",
+  "name": "react-starter",
+  "version": "1.0.0",
+  "main": "index.js",
   "author": "ChrisBuck",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack --env development",
@@ -69,19 +69,13 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileMocks.js"
+    }
   }
 }

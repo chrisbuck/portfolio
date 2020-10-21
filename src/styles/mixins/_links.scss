@@ -1,0 +1,6 @@
+@mixin standardLink(){
+    text-decoration: none;
+    &:hover{
+        color: #007bff;
+    }
+}

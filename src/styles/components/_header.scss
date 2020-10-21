@@ -1,0 +1,71 @@
+@import '../settings/settings';
+@import '../mixins/mixins';
+
+#topHeader{
+    display: flex;
+    justify-content: center;
+    @media (min-width: $break_xs){
+        justify-content: flex-end;
+    }
+    .iconLinkWrapper{
+        min-width: 30px;
+        text-align: center;
+        .iconLink{
+
+        }
+    }
+}
+#mainHeader{
+    justify-content: center;
+    @media (min-width: $break_xs){
+        justify-content: left;
+    }
+    #brandingWrapper{
+        align-items: center;
+        text-align: center;
+        display: block;
+        @media (min-width: $break_xs){
+            align-items: left;
+            display: inline-flex;
+        }
+        #logoWrapper{
+            margin-right: 20px;
+            .profile-image {
+                clip-path: circle(50% at 50% 50%);
+                max-width: 84px;
+            }
+        }
+    }
+}
+#lowerHeader{
+    #mainNav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        min-width: 100%;
+        .navItemWrap{
+            background-color: #0034619c;
+            border: 8px solid transparent;
+            max-width: 100%;
+            min-width: 100%;
+            text-align: center;
+            width: 100%;
+            @media (min-width: $break_md){
+                min-width: 0;
+                max-width: 200px;
+            }
+            &:hover{
+                border: 8px solid #0034619c;
+            }
+            .navItemInner{
+                border: 1px solid #00108061;
+                a{
+                    color: whitesmoke;
+                    display: block;
+                    width: 100%;
+                    @include standardLink();
+                }
+            }
+        }
+    }
+}

@@ -6,10 +6,7 @@
     background-repeat: no-repeat;
   }
   
-  .profile-image {
-    clip-path: circle(50% at 50% 50%);
-    max-width: 200px;
-  }
+  
   /*
   .App-logo {
     height: 40vmin;

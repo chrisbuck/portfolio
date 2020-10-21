@@ -1,0 +1,7 @@
+.sectionWrapper{
+    margin-top: 40px;
+    .sectionTitle{
+        @include centerText();
+        margin-top: -15px;
+    }
+}

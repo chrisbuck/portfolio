@@ -1,19 +1,46 @@
 import React from 'react';
-import AppRouter from './routers/AppRouter';
-//import logo from './logo.svg';
-import './styles/App.css';
-import Header from './layout/Header/Header';
+import ReactDOM from 'react-dom';
+import * as historyMod from 'history';
+import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+import './styles/styles.scss';
 
-function App() {
-  return (
-    <div className="App" style={{backgroundImage: 'url("./images/light-blue.jpg")'}}>
-      <Header />
-        <section className="App-body">
-        <h2>Test</h2>
-          <AppRouter />
-        </section>
-    </div>
-  );
+import App from './components/App';
+import LoadingPage from './pages/LoadingPage';
+
+export const history = historyMod.createBrowserHistory();
+
+const Jsx = (props) => {
+    return(
+        <div>
+            <App />
+        </div>
+    );
 }
 
-export default App;
+let hasRendered = false;
+export const renderApp = () => {
+    if(!hasRendered) {
+        ReactDOM.render(<Jsx></Jsx>, document.getElementById('root'));
+        hasRendered = true;
+        return(hasRendered);
+    } else {
+        return false;
+    }
+};
+
+// ReactDOM.render(<LoadingPage />, document.getElementById('root'));
+renderApp();
+
+/*
+// firebase.auth().onAuthStateChanged((user) => {
+//     if(user){
+//             renderApp();
+//             if ( history.location.pathname === '/' ) {
+//                 history.push('/restaurants');
+//             }
+//     } else {
+//         renderApp();
+//         history.push('/');
+//     }
+// });
+*/

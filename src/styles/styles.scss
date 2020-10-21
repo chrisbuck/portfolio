@@ -1,0 +1,100 @@
+ @import './settings/settings';
+ @import './mixins/mixins';
+ @import './components/components.scss';
+
+#loading{
+    //margin-top: 25%;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+}
+
+#appWrapper{
+    // background: url('/images/bg.jpg');
+    // background-position: 50% 50%;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#appContainer{
+    background: url('/images/light-blue.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    // margin-top: -10px;
+    min-height: 100vh;
+}
+
+.restaurantDetails{
+    background-color: #ffffffdb;
+    padding: 20px;
+}
+
+.starsWrapper{
+    display: inline-flex;
+    .starsWidget{
+        margin-left: 5px;
+    }
+}
+
+.addReviewBtnWrap{
+    margin-bottom: 20px;
+}
+
+.reviewReveal{
+    cursor: pointer;
+    hr{
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    &:hover{
+        hr{
+            border-top: 1px solid rgba(30, 47, 259, 0.5);
+        }
+    }
+}
+
+.reviewWrapper{
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.reviewDetailRow{
+    padding-bottom: 10px;
+}
+.myReviewWrapper{
+    margin-bottom: 20px;
+}
+.myReview{
+    background-color: #0095ff2e;
+    border: 1px solid #0095ff;
+    padding: 5px 10px;
+    
+}
+.adminControls{
+    display: inline-flex;
+    position: absolute;
+    margin-right: 20px;
+    right: 0;
+    top: 0;
+    .deleteReplyButtonWrapper{
+        margin-right: 3px;
+    }
+}
+
+#addRestaurantFormWrapper{
+    background: white;
+    border: 1px solid grey;
+}
+.innerPageContent {
+    background: white;
+    border: 1px solid grey;
+}
+
+.loginPageWrapper{
+    margin-top: 10px;
+}
