@@ -8,14 +8,20 @@ import ResumePage from '../pages/ResumePage';
 
 export const history = historyMod.createBrowserHistory();
 
+const isDev = false;
+let approot = '/';
+if( isDev === false ){
+    approot = '/portfolio/';
+}
+
 const AppRouter = () => (
     <Router history={history}>
         <div className="body-content">
         <Switch>
-            <Route path="/" component={MainPage} exact={true} />
-            <Route path="/projects" component={ProjectsPage} />
-            <Route path="/react" component={ReactPage} />
-            <Route path="/resume" component={ResumePage} />
+            <Route path={approot + "/"} component={MainPage} exact={true} />
+            <Route path={approot + "/projects"} component={ProjectsPage} />
+            <Route path={approot + "/react"} component={ReactPage} />
+            <Route path={approot + "/resume"} component={ResumePage} />
         </Switch>
         </div>
     </Router>
