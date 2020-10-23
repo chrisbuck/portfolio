@@ -8,14 +8,14 @@ import ResumePage from '../pages/ResumePage';
 
 export const history = historyMod.createBrowserHistory();
 
-const isDev = false;
+const isDev = true;
 let approot = '/';
 if( isDev === false ){
     approot = '/portfolio/';
 }
 
 const AppRouter = () => (
-    <Router history={history}>
+    <Router history={history} basename={process.env.PUBLIC_URL}>
         <div className="body-content">
         <Switch>
             <Route path={approot + ""} component={MainPage} exact={true} />
