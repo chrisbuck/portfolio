@@ -8,7 +8,7 @@ import ResumePage from '../pages/ResumePage';
 
 export const history = historyMod.createBrowserHistory();
 
-const isDev = true;
+const isDev = false;
 let approot = '/';
 if( isDev === false ){
     approot = '/portfolio/';
