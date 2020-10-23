@@ -1,46 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import * as historyMod from 'history';
-import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
-import './styles/styles.scss';
+import logo from './logo.svg';
+import './App.css';
 
-import App from './components/App';
-import LoadingPage from './pages/LoadingPage';
-
-export const history = historyMod.createBrowserHistory();
-
-const Jsx = (props) => {
-    return(
-        <div>
-            <App />
-        </div>
-    );
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-let hasRendered = false;
-export const renderApp = () => {
-    if(!hasRendered) {
-        ReactDOM.render(<Jsx></Jsx>, document.getElementById('root'));
-        hasRendered = true;
-        return(hasRendered);
-    } else {
-        return false;
-    }
-};
-
-// ReactDOM.render(<LoadingPage />, document.getElementById('root'));
-renderApp();
-
-/*
-// firebase.auth().onAuthStateChanged((user) => {
-//     if(user){
-//             renderApp();
-//             if ( history.location.pathname === '/' ) {
-//                 history.push('/restaurants');
-//             }
-//     } else {
-//         renderApp();
-//         history.push('/');
-//     }
-// });
-*/
+export default App;
