@@ -7,7 +7,6 @@ const MainPage = () => (
     <Container id="appContainer" fluid>
         <Header />
         <div className="page-content">
-            <a href="/resume">Resume</a>
         </div>
     </Container>
 );
